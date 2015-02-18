@@ -1,0 +1,443 @@
+body {
+	padding-top: 60px;
+}
+
+.navbar-fixed-top .navbar-inner,.navbar-fixed-bottom .navbar-inner {
+	padding: 0 5px 0 0 !important;
+}
+
+.gc-social {
+	float: right;
+	font-size: 12px;
+	padding: 3px 0 3px 3px;
+}
+
+.gc-social>div {
+	float: left;
+}
+
+.gc-social .email {
+	color: #777777;
+	font-weight: bold;
+}
+
+.gc-social img {
+	border: 1px solid #ACACAC;
+	border-radius: 2px 2px 2px 2px;
+	margin-left: 8px;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	max-width: 30px;
+}
+
+.gc-social a,.gc-social a:visited {
+	color: #808080;
+	display: block;
+	line-height: 140%;
+	text-align: right;
+	text-decoration: none;
+}
+
+.gc-social a:HOVER {
+	text-decoration: underline;
+}
+
+/* .documents a {
+	display: block;
+} */
+.file {
+	padding-left: 5px;
+}
+
+.uploadButton {
+	overflow: hidden;
+	cursor: pointer;
+	border: 0px none;
+	position: relative;
+	color: #0088CC;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+.uploadButton i {
+	padding-right: 2px;
+}
+
+.uploadButton:HOVER {
+	text-decoration: underline;
+}
+
+.TaxesView .addTax {
+	width: 30px;
+}
+
+.TaxEditPanel .uploadButton,.IncomeEditPanel .uploadButton {
+	padding-top: 5px;
+}
+
+.modal-loading {
+	z-index: 2000;
+}
+
+.modal-loading.modal-backdrop.fade {
+	opacity: 0;
+	background-image: url("../img/ajax-loader.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.modal-loading.modal-backdrop,.modal-loading.modal-backdrop.fade.in {
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+}
+
+.gwt-DateBox {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #999999 #CCCCCC #CCCCCC;
+	border-image: none;
+	border-right: 1px solid #CCCCCC;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 100%;
+	padding: 5px 4px;
+}
+
+.gwt-DateBox input {
+	width: 8em;
+}
+
+.dateBoxFormatError {
+	background: none repeat scroll 0 0 #FFCCCC;
+}
+
+.dateBoxPopup {
+	z-index: 1055;
+}
+
+.gwt-DatePicker {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #999999 #CCCCCC #CCCCCC;
+	border-image: none;
+	border-right: 1px solid #CCCCCC;
+	border-style: solid;
+	border-width: 1px;
+	cursor: default;
+}
+
+.gwt-DatePicker td,.datePickerMonthSelector td:focus {
+	outline: medium none;
+}
+
+.datePickerDays {
+	background: none repeat scroll 0 0 white;
+	width: 100%;
+}
+
+.datePickerDay,.datePickerWeekdayLabel,.datePickerWeekendLabel {
+	border-bottom: 1px solid #EDEDED;
+	border-right: 1px solid #EDEDED;
+	color: #333333;
+	font-size: 85%;
+	font-weight: bold;
+	outline: medium none;
+	padding: 4px;
+	text-align: center;
+}
+
+.datePickerWeekdayLabel,.datePickerWeekendLabel {
+	background: none repeat scroll 0 0 #FFFFFF;
+	color: #666666;
+	cursor: default;
+	font-size: 70%;
+	font-weight: normal;
+	padding: 0 4px 2px;
+}
+
+.datePickerDay {
+	cursor: pointer;
+	padding: 4px 7px;
+}
+
+.datePickerDayIsWeekend {
+	background: none repeat scroll 0 0 #F7F7F7;
+}
+
+.datePickerDayIsFiller {
+	color: #999999;
+	font-weight: normal;
+}
+
+.datePickerDayIsValue {
+	background: none repeat scroll 0 0 #D7DFE8;
+}
+
+.datePickerDayIsDisabled {
+	color: #AAAAAA;
+	font-style: italic;
+}
+
+.datePickerDayIsHighlighted {
+	background: none repeat scroll 0 0 #F0E68C;
+}
+
+.datePickerDayIsValueAndHighlighted {
+	background: none repeat scroll 0 0 #D7DFE8;
+}
+
+.datePickerDayIsToday {
+	background: url("../img/hborder.png") repeat-x scroll 0 -2607px transparent;
+	color: #FFFFFF;
+	padding: 3px;
+}
+
+.datePickerMonthSelector {
+	background: none repeat scroll 0 0 #FFFFFF;
+	padding: 1px 0 5px;
+	width: 100%;
+}
+
+td.datePickerMonth {
+	color: #333333;
+	font-size: 100%;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.datePickerPreviousButton,.datePickerNextButton {
+	color: #3A6AAD;
+	cursor: pointer;
+	font-size: 120%;
+	font-weight: bold;
+	line-height: 1em;
+	outline: medium none;
+	padding: 0 4px;
+}
+
+.gwt-SuggestBox {
+	padding: 5px 4px;
+	border: 1px solid #ccc;
+	border-top: 1px solid #999;
+	font-size: 100%;
+	font-family: Arial Unicode MS, Arial, sans-serif;
+}
+
+.gwt-SuggestBoxPopup {
+	z-index: 1055;
+}
+
+.gwt-SuggestBoxPopup .item {
+	padding: 2px 6px;
+	color: #000;
+	cursor: default;
+	font-size: 110%;
+}
+
+.gwt-SuggestBoxPopup .item-selected {
+	background: #D5E2FF;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupContent {
+	background: white;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopCenter {
+	border-top: 1px solid #bbb;
+	background-color: white;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomCenter {
+	border-bottom: 1px solid #bbb;
+	background-color: white;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopCenterInner,.gwt-SuggestBoxPopup .suggestPopupBottomCenterInner {
+	height: 1px;
+	line-height: 1px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeft {
+	border-left: 1px solid #bbb;
+	background-color: white;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddleRight {
+	border-right: 1px solid #bbb;
+	background-color: white;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeftInner,.gwt-SuggestBoxPopup .suggestPopupMiddleRightInner {
+	width: 1px;
+	line-height: 1px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+	width: 0px;
+	height: 0px;
+	zoom: 1;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+	width: 0px;
+	height: 0px;
+	zoom: 1;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+	width: 0px;
+	height: 0px;
+	zoom: 1;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+	width: 0px;
+	height: 0px;
+	zoom: 1;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopLeft {
+	background: url(../img/circles.png) no-repeat 0px -6px;
+	-background: url(../img/circles_ie6.png) no-repeat 0px -6px;
+	width: 5px;
+	height: 5px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopRight {
+	background: url(../img/circles.png) no-repeat -5px -6px;
+	-background: url(../img/circles_ie6.png) no-repeat -5px -6px;
+	width: 5px;
+	height: 5px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomLeft {
+	background: url(../img/circles.png) no-repeat 0px -11px;
+	-background: url(../img/circles_ie6.png) no-repeat 0px -11px;
+	width: 5px;
+	height: 5px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomRight {
+	background: url(../img/circles.png) no-repeat -5px -11px;
+	-background: url(../img/circles_ie6.png) no-repeat -5px -11px;
+	width: 5px;
+	height: 5px;
+}
+
+html>body .gwt-SuggestBoxPopup {
+	
+}
+
+* html .gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+
+* html .gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+
+* html .gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+
+* html .gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+
+.level2 th {
+	font-weight: normal;
+}
+
+.row-begin {
+	
+}
+
+.table-bordered {
+	border-width: 2px 2px 2px 0;
+	border-color: #AAAAAA #AAAAAA #AAAAAA -moz-use-text-color;
+}
+
+.table-bordered .row-begin td,tfoot tr td,thead tr.level2 th {
+	border-top: 2px solid #AAAAAA !important;
+}
+
+.table-bordered .col1 {
+	border-left: 2px solid #AAAAAA;
+	background-color: #EEEEEE !important;
+}
+
+.table-bordered .col1 div {
+	position: relative;
+	width: 300px;
+}
+
+.table-bordered .col-service>div {
+	position: relative;
+}
+
+/* .table-bordered .col-service, .table-bordered .col1 {
+	padding: 0px !important;
+} */
+.content,.content-hidden,.anchor,.anchor-hidden {
+	width: 100%;
+}
+
+.content-hidden,.anchor-hidden {
+	color: transparent;
+}
+
+.content,.anchor {
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	padding: 8px;
+}
+
+.anchor {
+	background-color: #EEEEEE;
+}
+
+.content {
+	background-color: white;
+}
+
+.table-striped tbody>tr:nth-child(2n+ 1) > td .content {
+	background-color: #F9F9F9;
+}
+
+/* 
+.table-striped tbody > tr:nth-child(6n+1) > td, .table-striped tbody > tr:nth-child(7n+1) > th {
+	background-color: #FFD9D8 !important;
+}
+.table-striped tbody > tr:nth-child(6n+2) > td, .table-striped tbody > tr:nth-child(7n+2) > th {
+	background-color: #FFCDA0 !important;
+}
+.table-striped tbody > tr:nth-child(6n+3) > td, .table-striped tbody > tr:nth-child(7n+3) > th {
+	background-color: #FCFF8C !important;
+}
+.table-striped tbody > tr:nth-child(6n+4) > td, .table-striped tbody > tr:nth-child(7n+3) > th {
+	background-color: #ACC0B1 !important;
+}
+.table-striped tbody > tr:nth-child(6n+5) > td, .table-striped tbody > tr:nth-child(7n+3) > th {
+	background-color: #A8C5FF !important;
+}
+.table-striped tbody > tr:nth-child(6n+6) > td, .table-striped tbody > tr:nth-child(7n+3) > th {
+	background-color: #EEBCFF !important;
+}
+
+*/

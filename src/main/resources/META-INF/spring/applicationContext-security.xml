@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+	<security:http auto-config="true" use-expressions="true" access-denied-page="/WEB-INF/jsp/deniedpage.jsp">
+
+		<security:remember-me use-secure-cookie="true" />
+
+		<security:intercept-url pattern="/login*" access="permitAll" />
+		<security:intercept-url pattern="/css/**" access="permitAll" />
+		<security:intercept-url pattern="/img/**" access="permitAll" />
+		<security:intercept-url pattern="/js/**" access="permitAll" />
+        <security:intercept-url pattern="/**" access="isAuthenticated()" />
+		<!-- <security:intercept-url pattern="/**" access="permitAll"></security:intercept-url> -->
+
+		<!-- возвращает 200 если авторизовались (или 304); 401 если нет -->
+
+		<security:form-login login-page="/login" login-processing-url="/j_spring_security_check" 
+			 authentication-failure-url="/login?error=true"/>
+
+		<security:logout invalidate-session="true" logout-url="/logout"/>
+
+	</security:http>
+	<!--
+		Use a Md5 encoder since the user's passwords are stored as Md5 in the
+		database <bean
+		class="org.springframework.security.authentication.encoding.Md5PasswordEncoder"
+		id="passwordEncoder"></bean>
+	-->
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider
+			user-service-ref="customUserDetailsService">
+			<!-- <security:password-encoder ref="passwordEncoder" /> -->
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+
+	<bean id="customUserDetailsService" class="com.land.server.security.CustomUserDetailsService"></bean>
+
+
+	<!--
+		<bean id="securityMessageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames"> <list>
+		<value>/WEB-INF/i18n/security/message</value> </list> </property>
+		<property name="cacheSeconds" value="3600"/> <property
+		name="useCodeAsDefaultMessage" value="true"/> </bean>
+	-->
+	<!--
+		john's password is admin, while jane;s password is user
+
+		<security:authentication-manager> <security:authentication-provider
+		user-service-ref="userDetailsService"> <security:password-encoder
+		ref="passwordEncoder"></security:password-encoder>
+		</security:authentication-provider> </security:authentication-manager>
+
+
+		<security:user-service id="userDetailsService"> <security:user
+		name="john" password="21232f297a57a5a743894a0e4a801fc3"
+		authorities="ROLE_USER, ROLE_ADMIN"></security:user> <security:user
+		name="jane" password="ee11cbb19052e40b07aac0ca060c23ee"
+		authorities="ROLE_USER"></security:user> </security:user-service>
+	-->
+
+
+
+	<!--  Включаем анотации в коде, с их помощью защищаем RPC методы -->
+	<security:global-method-security secured-annotations="enabled" jsr250-annotations="disabled" />
+
+</beans>
